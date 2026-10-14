@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="WebApplication1.SiteMaster" %>
+<%@ Register Src="~/Controls/IconSprite.ascx" TagPrefix="et" TagName="IconSprite" %>
+<%@ Register Src="~/Controls/Navbar.ascx" TagPrefix="et" TagName="Navbar" %>
+<%@ Register Src="~/Controls/Footer.ascx" TagPrefix="et" TagName="Footer" %>
+<!doctype html>
+<html lang="en">
+<head runat="server">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0c12" />
+  <meta name="description" content="EasyTravel — book flights and luxury stays across India and the world." />
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23adc6ff%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M22 2 11 13%27/%3E%3Cpath d=%27M22 2 15 22l-4-9-9-4z%27/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="~/css/style.css" runat="server" />
+</head>
+<body>
+  <et:IconSprite runat="server" />
+  <et:Navbar runat="server" />
+  <form id="MainForm" runat="server">
+    <main>
+      <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </main>
+  </form>
+  <et:Footer runat="server" />
+  <script src='<%= ResolveUrl("~/js/main.js") %>'></script>
+</body>
+</html>
